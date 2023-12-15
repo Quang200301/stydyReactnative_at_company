@@ -17,12 +17,14 @@ const ShowMilkTea: React.FC<ShowMilkTeaProps> = ({
 }: ShowMilkTeaProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.name}>{milktea.name}</Text>
-      <Text style={styles.age}>{milktea.age}</Text>
+      <Image source={{uri: milktea.avatar}} style={styles.avartars} />
+      <View>
+        <Text style={styles.name}>{milktea.name}</Text>
+        <Text style={styles.age}>{milktea.age}</Text>
+      </View>
       <TouchableOpacity onPress={() => updateData(milktea)}>
         <Text style={styles.showDetail}> Show Detail</Text>
       </TouchableOpacity>
-      <Image source={{uri: milktea.avatar}} style={styles.avartars} />
     </View>
   );
 };
@@ -30,12 +32,18 @@ const ShowMilkTea: React.FC<ShowMilkTeaProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    backgroundColor: 'lightblue',
+    marginHorizontal: 12,
+    marginVertical: 10,
+    flexDirection: 'row',
+    borderRadius: 12,
   },
   avartars: {
-    width: 300,
-    height: 200,
+    width: 150,
+    height: 150,
+    borderRadius: 100,
   },
   age: {
     fontSize: 20,

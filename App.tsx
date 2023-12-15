@@ -189,7 +189,7 @@ import React from 'react';
 import ShowMilkTea from './android/app/src/Compopnent/ShowMilkTea';
 import AppLogic from './android/app/src/Compopnent/AppLogic';
 
-export default function App() {
+export default function Main() {
   const {
     search,
     modalVisible,
